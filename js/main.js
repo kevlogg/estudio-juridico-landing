@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ESTUDIO JURÍDICO - DRA. ELENA VALENZUELA
+   ESTUDIO JURÍDICO - DRA. CARLA OREQUI
    Lógica Interactivas, Animaciones de Scroll, Modal y Formulario
    ========================================================================== */
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        observer.unobserve(entry.target); // Animación de entrada única
+        observer.unobserve(entry.target);
       }
     });
   }, {
@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeMobileMenu() {
     mobileMenuDrawer.classList.add('translate-x-full');
-    mobileMenuOverlay.classList.classList ? mobileMenuOverlay.classList.add('hidden') : null;
     mobileMenuOverlay.classList.add('hidden');
     document.body.style.overflow = '';
   }
@@ -126,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
     tab.addEventListener('click', () => {
       const category = tab.getAttribute('data-category');
 
-      // Actualizar estilo activo del tab
       areaTabs.forEach(t => {
         t.classList.remove('bg-slate-900', 'text-white');
         t.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
@@ -134,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
       tab.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
       tab.classList.add('bg-slate-900', 'text-white');
 
-      // Filtrar tarjetas con transición suave
       practiceCards.forEach(card => {
         const cardCat = card.getAttribute('data-category');
         if (category === 'all' || cardCat === category) {
@@ -189,10 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Generar mensaje para WhatsApp
-      const lawyerNumber = '5491123456789'; // Número oficial configurable
+      const lawyerNumber = '5491123456789';
       const area = categorySelect ? categorySelect.value : 'Consulta General';
-      const text = `Hola Dra. Elena Valenzuela, mi nombre es *${nameInput.value.trim()}*.\n\nRequiero asistencia legal referente a: *${area}*.\n\nTeléfono de contacto: ${phoneInput.value.trim()}\nEmail: ${emailInput ? emailInput.value.trim() : 'N/A'}\n\nDetalle de la consulta: ${messageInput ? messageInput.value.trim() : 'Solicitud de agendamiento directo.'}`;
+      const text = `Hola Dra. Carla Orequi, mi nombre es *${nameInput.value.trim()}*.\n\nRequiero asistencia legal referente a: *${area}*.\n\nTeléfono de contacto: ${phoneInput.value.trim()}\nEmail: ${emailInput ? emailInput.value.trim() : 'N/A'}\n\nDetalle de la consulta: ${messageInput ? messageInput.value.trim() : 'Solicitud de agendamiento directo.'}`;
 
       const whatsappUrl = `https://wa.me/${lawyerNumber}?text=${encodeURIComponent(text)}`;
 
