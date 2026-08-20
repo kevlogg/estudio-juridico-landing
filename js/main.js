@@ -33,9 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.getElementById('site-header');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
-      header.classList.add('shadow-sm', 'border-b', 'border-slate-200/80');
+      header.classList.add('shadow-xl', 'border-b', 'border-white/10');
     } else {
-      header.classList.remove('shadow-sm', 'border-b', 'border-slate-200/80');
+      header.classList.remove('shadow-xl', 'border-b', 'border-white/10');
     }
   });
 
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 5. FILTRADO INTERACTIVO DE ÁREAS DE PRÁCTICA (TAB SELECTION)
+  // 5. FILTRADO INTERACTIVO DE ÁREAS DE PRÁCTICA (DARK TAB SELECTION)
   const areaTabs = document.querySelectorAll('.area-tab');
   const practiceCards = document.querySelectorAll('.practice-card');
 
@@ -126,11 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const category = tab.getAttribute('data-category');
 
       areaTabs.forEach(t => {
-        t.classList.remove('bg-slate-900', 'text-white');
-        t.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+        t.classList.remove('bg-brandGold', 'text-slate-950', 'font-bold');
+        t.classList.add('bg-brandBg', 'text-slate-300', 'border', 'border-white/10', 'font-medium');
       });
-      tab.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
-      tab.classList.add('bg-slate-900', 'text-white');
+      tab.classList.remove('bg-brandBg', 'text-slate-300', 'border', 'border-white/10', 'font-medium');
+      tab.classList.add('bg-brandGold', 'text-slate-950', 'font-bold');
 
       practiceCards.forEach(card => {
         const cardCat = card.getAttribute('data-category');
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const mainContactForm = document.getElementById('main-contact-form');
   const toastNotification = document.getElementById('toast-notification');
 
-  function showToast(message, type = 'success') {
+  function showToast(message) {
     if (!toastNotification) return;
     const toastMsg = document.getElementById('toast-message');
     if (toastMsg) toastMsg.textContent = message;
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isModal) closeModal();
       formElement.reset();
 
-      showToast('¡Mensaje procesado con éxito! Redirigiendo a WhatsApp para agendar...');
+      showToast('¡Solicitud registrada! Redirigiendo a WhatsApp...');
       
       setTimeout(() => {
         window.open(whatsappUrl, '_blank');
