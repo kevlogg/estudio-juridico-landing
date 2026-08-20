@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Elena Valenzuela | Abogada & Estrategia Legal Corporativa</title>
+  <meta name="description" content="Estudio jurídico independiente enfocado en soluciones legales estratégicas, derecho corporativo, civil y litigios de alta complejidad con compromiso, ética y transparencia.">
+  <meta name="keywords" content="abogada, estudio juridico, derecho corporativo, asesoramiento legal, sucesiones, litigios, convenios, derecho civil">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Dra. Elena Valenzuela | Abogada & Estrategia Legal">
+  <meta property="og:description" content="Soluciones legales estratégicas con compromiso y transparencia. Asesoramiento jurídico integral para personas y empresas.">
+  <meta property="og:type" content="website">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Configuración de Tailwind CSS Inline -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBg: '#F9FAFB',
+            brandDark: '#0F172A',
+            brandNavy: '#1E3A8A',
+            brandGold: '#C5A880',
+            brandGoldHover: '#B39468',
+            brandBorder: '#E2E8F0',
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-brandBg text-slate-900 font-sans antialiased selection:bg-brandGold/20 selection:text-brandDark">
+
+  <!-- TOP ANNOUNCEMENT BAR / BARRA DE INFORMACIÓN SUPERIOR -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 hidden md:block">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-6">
+        <span class="flex items-center gap-1.5">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brandGold"></i>
+          Av. Alvear 1807, Piso 4°, Recoleta, Buenos Aires
+        </span>
+        <span class="flex items-center gap-1.5">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-brandGold"></i>
+          Lun - Vie: 09:00 - 18:00 hs
+        </span>
+      </div>
+      <div class="flex items-center space-x-6">
+        <span class="flex items-center gap-1.5">
+          <i data-lucide="award" class="w-3.5 h-3.5 text-brandGold"></i>
+          Matrícula C.P.A.CF. T° 112 F° 450
+        </span>
+        <a href="tel:+5491123456789" class="hover:text-brandGold transition-colors flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-brandGold"></i>
+          +54 11 2345-6789
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. HEADER / NAVBAR STICKY -->
+  <header id="site-header" class="sticky top-0 z-40 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO TIPOGRÁFICO MINIMALISTA -->
+      <a href="#hero" class="group flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-sm bg-slate-900 text-brandGold flex items-center justify-center font-serif text-xl font-bold tracking-widest group-hover:bg-brandGold group-hover:text-slate-900 transition-colors">
+          EV
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-xl sm:text-2xl font-bold text-slate-900 tracking-tight leading-none group-hover:text-brandGold transition-colors">
+            Dra. Elena Valenzuela
+          </span>
+          <span class="text-[10px] uppercase tracking-widest text-slate-500 font-medium mt-1">
+            Derecho & Estrategia Legal
+          </span>
+        </div>
+      </a>
+
+      <!-- NAV LINKS DESKTOP -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-700">
+        <a href="#hero" class="nav-link-underline hover:text-slate-900 transition-colors">Inicio</a>
+        <a href="#areas" class="nav-link-underline hover:text-slate-900 transition-colors">Áreas de Práctica</a>
+        <a href="#sobre-mi" class="nav-link-underline hover:text-slate-900 transition-colors">Sobre Mí</a>
+        <a href="#metodologia" class="nav-link-underline hover:text-slate-900 transition-colors">Proceso</a>
+        <a href="#testimonios" class="nav-link-underline hover:text-slate-900 transition-colors">Testimonios</a>
+        <a href="#contacto" class="nav-link-underline hover:text-slate-900 transition-colors">Contacto</a>
+      </nav>
+
+      <!-- BOTÓN CTA DESKTOP -->
+      <div class="hidden md:flex items-center space-x-4">
+        <button class="btn-open-modal inline-flex items-center justify-center px-5 py-2.5 rounded-sm bg-slate-900 text-white text-xs font-semibold uppercase tracking-wider hover:bg-brandGold hover:text-slate-900 transition-all duration-300 shadow-sm hover:shadow-md">
+          <i data-lucide="calendar" class="w-3.5 h-3.5 mr-2"></i>
+          Agendar Consulta
+        </button>
+      </div>
+
+      <!-- BOTÓN HAMBURGUESA MÓVIL -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-700 hover:text-slate-900 focus:outline-none" aria-label="Abrir menú">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENÚ MÓVIL (DRAWER DESLIZABLE) -->
+  <div id="mobile-menu-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 bottom-0 w-4/5 max-w-sm bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col justify-between p-6">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+        <span class="font-serif text-lg font-bold text-slate-900">Dra. Elena Valenzuela</span>
+        <button id="close-mobile-menu-btn" class="p-2 text-slate-500 hover:text-slate-900" aria-label="Cerrar menú">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <nav class="mt-8 flex flex-col space-y-5 font-medium text-slate-800 text-base">
+        <a href="#hero" class="mobile-nav-link hover:text-brandGold transition-colors">Inicio</a>
+        <a href="#areas" class="mobile-nav-link hover:text-brandGold transition-colors">Áreas de Práctica</a>
+        <a href="#sobre-mi" class="mobile-nav-link hover:text-brandGold transition-colors">Sobre Mí</a>
+        <a href="#metodologia" class="mobile-nav-link hover:text-brandGold transition-colors">Proceso de Trabajo</a>
+        <a href="#testimonios" class="mobile-nav-link hover:text-brandGold transition-colors">Testimonios</a>
+        <a href="#contacto" class="mobile-nav-link hover:text-brandGold transition-colors">Contacto</a>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-slate-100 space-y-4">
+      <button class="btn-open-modal w-full py-3 bg-slate-900 text-white font-semibold text-xs uppercase tracking-wider rounded-sm hover:bg-brandGold hover:text-slate-900 transition-colors flex items-center justify-center">
+        <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+        Agendar Consulta
+      </button>
+      <a href="https://wa.me/5491123456789" target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-emerald-600 text-white font-semibold text-xs uppercase tracking-wider rounded-sm hover:bg-emerald-700 transition-colors flex items-center justify-center">
+        <i data-lucide="message-square" class="w-4 h-4 mr-2"></i>
+        WhatsApp Directo
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. HERO SECTION -->
+  <section id="hero" class="relative pt-12 pb-20 md:pt-24 md:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- TEXTO HERO -->
+        <div class="lg:col-span-7 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/5 border border-slate-200 text-slate-700 text-xs font-semibold uppercase tracking-wider mb-6">
+            <span class="w-2 h-2 rounded-full bg-brandGold animate-pulse"></span>
+            Asesoría Jurídica Estratégica & Litigación
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-slate-900 leading-[1.15] tracking-tight mb-6">
+            Soluciones legales estratégicas con <span class="gold-gradient-text italic font-normal">compromiso & transparencia</span>
+          </h1>
+
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl font-light">
+            Brindamos asesoramiento jurídico integral para personas y estructuras corporativas. Defendemos sus derechos con máxima rigurosidad técnica, confidencialidad absoluta y atención altamente personalizada en cada etapa.
+          </p>
+
+          <!-- BOTONES CTA -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
+            <button class="btn-open-modal inline-flex items-center justify-center px-8 py-4 bg-slate-900 text-white text-xs uppercase font-bold tracking-widest rounded-sm hover:bg-brandGold hover:text-slate-900 transition-all duration-300 shadow-md hover:shadow-lg">
+              <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+              Agendar Consulta Privada
+            </button>
+            <a href="#areas" class="inline-flex items-center justify-center px-8 py-4 bg-white text-slate-800 border border-slate-300 text-xs uppercase font-bold tracking-widest rounded-sm hover:bg-slate-50 hover:border-slate-400 transition-all duration-300">
+              Ver Especialidades
+              <i data-lucide="arrow-right" class="w-4 h-4 ml-2 text-brandGold"></i>
+            </a>
+          </div>
+
+          <!-- INDICADORES DE CONFIANZA / METRICAS -->
+          <div class="pt-8 border-t border-slate-200 grid grid-cols-3 gap-6 text-left">
+            <div>
+              <p class="font-serif text-3xl font-bold text-slate-900">15+</p>
+              <p class="text-xs text-slate-500 uppercase tracking-wider font-medium mt-1">Años de Trayectoria</p>
+            </div>
+            <div>
+              <p class="font-serif text-3xl font-bold text-slate-900">+950</p>
+              <p class="text-xs text-slate-500 uppercase tracking-wider font-medium mt-1">Casos Exitosos</p>
+            </div>
+            <div>
+              <p class="font-serif text-3xl font-bold text-slate-900">100%</p>
+              <p class="text-xs text-slate-500 uppercase tracking-wider font-medium mt-1">Confidencialidad</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETA VISUAL DERECHA -->
+        <div class="lg:col-span-5 reveal delay-200">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="absolute -top-4 -left-4 w-72 h-72 bg-brandGold/15 rounded-full blur-3xl -z-10"></div>
+            
+            <div class="relative bg-white p-3 rounded-sm shadow-xl border border-slate-200/80">
+              <div class="overflow-hidden rounded-sm relative aspect-[4/5] bg-slate-100">
+                <img src="assets/images/lawyer_portrait.png" alt="Dra. Elena Valenzuela Abogada" class="w-full h-full object-cover object-top filter contrast-[1.03] transition-transform duration-700 hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-6 left-6 right-6 text-white">
+                  <span class="text-xs uppercase tracking-widest text-brandGold font-semibold">Abogada Titular</span>
+                  <h3 class="font-serif text-2xl font-bold mt-1">Dra. Elena Valenzuela</h3>
+                  <p class="text-xs text-slate-300 font-light mt-0.5">Especialista en Derecho Corporativo & Patrimonial</p>
+                </div>
+              </div>
+
+              <!-- FABRIC BADGE FLOATING -->
+              <div class="absolute -bottom-6 -right-6 bg-slate-900 text-white p-4 rounded-sm shadow-xl border border-slate-800 hidden sm:block max-w-[210px]">
+                <div class="flex items-center space-x-3">
+                  <div class="w-8 h-8 rounded bg-brandGold/20 text-brandGold flex items-center justify-center flex-shrink-0">
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-[11px] font-bold uppercase tracking-wider text-slate-200">Garantía Ética</p>
+                    <p class="text-[10px] text-slate-400">Atención personalizada y defensa activa</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ÁREAS DE PRÁCTICA (SERVICIOS) -->
+  <section id="areas" class="py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- HEADER SECCIÓN -->
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+        <span class="text-xs font-bold uppercase tracking-widest text-brandGold">Especializaciones Legales</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 mt-2 mb-4">
+          Áreas de Práctica & Especialidades
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base font-light">
+          Ofrecemos asesoría integral orientada a la prevención de conflictos y representación rigurosa en instancias prejudiciales y judiciales.
+        </p>
+
+        <!-- CATEGORY TABS FILTERS -->
+        <div class="mt-8 flex flex-wrap justify-center gap-2">
+          <button class="area-tab bg-slate-900 text-white px-4 py-2 rounded-sm text-xs uppercase font-semibold tracking-wider transition-colors" data-category="all">
+            Todas las Especialidades
+          </button>
+          <button class="area-tab bg-white text-slate-700 border border-slate-200 hover:border-slate-400 px-4 py-2 rounded-sm text-xs uppercase font-semibold tracking-wider transition-colors" data-category="corporativo">
+            Corporativo & Empresa
+          </button>
+          <button class="area-tab bg-white text-slate-700 border border-slate-200 hover:border-slate-400 px-4 py-2 rounded-sm text-xs uppercase font-semibold tracking-wider transition-colors" data-category="civil">
+            Civil & Patrimonial
+          </button>
+          <button class="area-tab bg-white text-slate-700 border border-slate-200 hover:border-slate-400 px-4 py-2 rounded-sm text-xs uppercase font-semibold tracking-wider transition-colors" data-category="laboral">
+            Laboral Ejecutivo
+          </button>
+          <button class="area-tab bg-white text-slate-700 border border-slate-200 hover:border-slate-400 px-4 py-2 rounded-sm text-xs uppercase font-semibold tracking-wider transition-colors" data-category="litigios">
+            Litigios & Arbitraje
+          </button>
+        </div>
+      </div>
+
+      <!-- GRID DE TARJETAS MINIMALISTAS -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- CARD 1 -->
+        <div class="practice-card glass-card card-hover-lift p-8 rounded-sm bg-brandBg/60 reveal delay-100" data-category="corporativo">
+          <div class="w-12 h-12 rounded-sm bg-slate-900 text-brandGold flex items-center justify-center mb-6">
+            <i data-lucide="building-2" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Corporativo</span>
+          <h3 class="font-serif text-xl font-bold text-slate-900 mt-1 mb-3">Derecho Societario & Pymes</h3>
+          <p class="text-xs text-slate-600 leading-relaxed font-light mb-6">
+            Constitución de sociedades, estructuración de acuerdos entre socios, auditoría de cumplimiento (compliance) y gobierno corporativo.
+          </p>
+          <ul class="text-[11px] text-slate-500 space-y-2 border-t border-slate-200 pt-4">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brandGold"></i> Contratos comerciales complejos</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brandGold"></i> Reorganización de empresas</li>
+          </ul>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="practice-card glass-card card-hover-lift p-8 rounded-sm bg-brandBg/60 reveal delay-200" data-category="civil">
+          <div class="w-12 h-12 rounded-sm bg-slate-900 text-brandGold flex items-center justify-center mb-6">
+            <i data-lucide="scale" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Patrimonial</span>
+          <h3 class="font-serif text-xl font-bold text-slate-900 mt-1 mb-3">Sucesiones & Planificación</h3>
+          <p class="text-xs text-slate-600 leading-relaxed font-light mb-6">
+            Gestión eficiente de procesos sucesorios, división de bienes familiares, fideicomisos y protección legal del patrimonio familiar.
+          </p>
+          <ul class="text-[11px] text-slate-500 space-y-2 border-t border-slate-200 pt-4">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brandGold"></i> Sucesiones testamentarias</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brandGold"></i> Planificación hereditaria</li>
+          </ul>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="practice-card glass-card card-hover-lift p-8 rounded-sm bg-brandBg/60 reveal delay-300" data-category="laboral">
+          <div class="w-12 h-12 rounded-sm bg-slate-900 text-brandGold flex items-center justify-center mb-6">
+            <i data-lucide="briefcase" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Laboral</span>
+          <h3 class="font-serif text-xl font-bold text-slate-900 mt-1 mb-3">Derecho Laboral Estratégico</h3>
+          <p class="text-xs text-slate-600 leading-relaxed font-light mb-6">
+            Asesoramiento para personal ejecutivo y empleadores. Negociaciones contractuales, pactos de no competencia y desvinculaciones.
+          </p>
+          <ul class="text-[11px] text-slate-500 space-y-2 border-t border-slate-200 pt-4">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brandGold"></i> Contratos de alta dirección</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brandGold"></i> Auditoría preventiva laboral</li>
+          </ul>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="practice-card glass-card card-hover-lift p-8 rounded-sm bg-brandBg/60 reveal delay-400" data-category="litigios">
+          <div class="w-12 h-12 rounded-sm bg-slate-900 text-brandGold flex items-center justify-center mb-6">
+            <i data-lucide="gavel" class="w-6 h-6"></i>
+          </div>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Litigios</span>
+          <h3 class="font-serif text-xl font-bold text-slate-900 mt-1 mb-3">Resolución de Conflictos</h3>
+          <p class="text-xs text-slate-600 leading-relaxed font-light mb-6">
+            Representación en litigios civiles y comerciales de alta complejidad. Mediaciones prejudiciales y arbitraje de conflictos contractuales.
+          </p>
+          <ul class="text-[11px] text-slate-500 space-y-2 border-t border-slate-200 pt-4">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brandGold"></i> Demandas y defensas civiles</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brandGold"></i> Mediaciones corporativas</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SOBRE MÍ / PROPUESTA DE VALOR -->
+  <section id="sobre-mi" class="py-20 lg:py-28 bg-brandBg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- FOTO INSTITUCIONAL MÍNIMALISTA -->
+        <div class="lg:col-span-5 reveal">
+          <div class="relative">
+            <div class="border-2 border-slate-900 p-2 rounded-sm">
+              <img src="assets/images/legal_office_bg.png" alt="Estudio Jurídico Interior" class="w-full rounded-sm object-cover aspect-[4/3] filter brightness-95">
+            </div>
+            
+            <div class="mt-4 p-6 bg-slate-900 text-white rounded-sm">
+              <blockquote class="font-serif italic text-base text-slate-200 leading-relaxed">
+                "El ejercicio de la abogacía exige rigor analítico, actualización permanente y una lealtad inquebrantable con los intereses del cliente."
+              </blockquote>
+              <p class="text-xs uppercase tracking-widest text-brandGold font-bold mt-4">
+                — Dra. Elena Valenzuela
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TEXTO SOBRE MÍ -->
+        <div class="lg:col-span-7 reveal delay-200">
+          <span class="text-xs font-bold uppercase tracking-widest text-brandGold">Propuesta de Valor & Trayectoria</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-slate-900 mt-2 mb-6">
+            Compromiso ético y estrategia legal diseñada a la medida de sus objetivos
+          </h2>
+
+          <div class="space-y-4 text-slate-600 text-sm sm:text-base font-light leading-relaxed">
+            <p>
+              Con más de 15 años de ejercicio profesional continuo, mi enfoque combina la sólidez académica con una visión pragmática para la resolución eficiente de controversias jurídicas.
+            </p>
+            <p>
+              Entendemos que cada caso representa decisiones críticas en la vida personal o financiera de nuestros clientes. Por ello, priorizamos la comunicación directa sin tecnicismos innecesarios y la previsibilidad en la toma de acciones tácticas.
+            </p>
+          </div>
+
+          <!-- PILARES FUNDAMENTALES -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 pt-8 border-t border-slate-200">
+            <div>
+              <div class="text-brandGold mb-2"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+              <h4 class="font-serif text-lg font-bold text-slate-900">Rigor Ético</h4>
+              <p class="text-xs text-slate-500 font-light mt-1">Transparencia absoluta en honorarios y viabilidad real del caso.</p>
+            </div>
+
+            <div>
+              <div class="text-brandGold mb-2"><i data-lucide="file-check" class="w-6 h-6"></i></div>
+              <h4 class="font-serif text-lg font-bold text-slate-900">Enfoque Preventivo</h4>
+              <p class="text-xs text-slate-500 font-light mt-1">Identificación temprana de contingencias para mitigar riesgos futuros.</p>
+            </div>
+
+            <div>
+              <div class="text-brandGold mb-2"><i data-lucide="user-check" class="w-6 h-6"></i></div>
+              <h4 class="font-serif text-lg font-bold text-slate-900">Trato Directo</h4>
+              <p class="text-xs text-slate-500 font-light mt-1">Atención personalizada gestionada directamente por la titular.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. PROCESO DE TRABAJO / METODOLOGÍA -->
+  <section id="metodologia" class="py-20 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="text-xs font-bold uppercase tracking-widest text-brandGold">Metodología Clara & Estructurada</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-white mt-2 mb-4">
+          Cómo Trabajamos en su Caso
+        </h2>
+        <p class="text-slate-400 text-sm font-light">
+          Un proceso transparente dividido en 3 etapas estratégicas para brindarle seguridad desde la primera consulta.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        
+        <!-- PASO 1 -->
+        <div class="relative p-8 rounded-sm bg-slate-800/80 border border-slate-700/80 reveal delay-100">
+          <div class="font-serif text-5xl font-bold text-brandGold/30 mb-4">01</div>
+          <h3 class="font-serif text-xl font-bold text-white mb-2">Consulta Inicial & Diagnóstico</h3>
+          <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+            Evaluamos la documentación relevante y escuchamos sus objetivos. Trazamos un diagnóstico preliminar identificando fortalezas, debilidades y viabilidad legal.
+          </p>
+          <div class="inline-flex items-center text-[11px] text-brandGold font-semibold">
+            <i data-lucide="clock" class="w-3.5 h-3.5 mr-1.5"></i> Duración estimada: 48 hs
+          </div>
+        </div>
+
+        <!-- PASO 2 -->
+        <div class="relative p-8 rounded-sm bg-slate-800/80 border border-slate-700/80 reveal delay-200">
+          <div class="font-serif text-5xl font-bold text-brandGold/30 mb-4">02</div>
+          <h3 class="font-serif text-xl font-bold text-white mb-2">Estrategia & Plan de Acción</h3>
+          <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+            Diseñamos la hoja de ruta jurídica (prejudicial o judicial), presupuestamos transparentemente cada etapa y acordamos la estrategia con el cliente.
+          </p>
+          <div class="inline-flex items-center text-[11px] text-brandGold font-semibold">
+            <i data-lucide="file-text" class="w-3.5 h-3.5 mr-1.5"></i> Presentación de Propuesta
+          </div>
+        </div>
+
+        <!-- PASO 3 -->
+        <div class="relative p-8 rounded-sm bg-slate-800/80 border border-slate-700/80 reveal delay-300">
+          <div class="font-serif text-5xl font-bold text-brandGold/30 mb-4">03</div>
+          <h3 class="font-serif text-xl font-bold text-white mb-2">Ejecución & Seguimiento</h3>
+          <p class="text-xs text-slate-300 font-light leading-relaxed mb-4">
+            Representación activa ante organismos, tribunales o contrapartes. Brindamos reportes periódicos de estado hasta la consecución del objetivo legal.
+          </p>
+          <div class="inline-flex items-center text-[11px] text-brandGold font-semibold">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5 mr-1.5"></i> Reportes Continuos
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA INTERMEDIO -->
+      <div class="mt-14 text-center reveal">
+        <button class="btn-open-modal inline-flex items-center px-8 py-3.5 bg-brandGold text-slate-900 text-xs uppercase font-bold tracking-widest rounded-sm hover:bg-white transition-colors">
+          <i data-lucide="message-square" class="w-4 h-4 mr-2"></i>
+          Iniciar Evaluación de Caso
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. TESTIMONIOS / CASOS DE ÉXITO -->
+  <section id="testimonios" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+        <span class="text-xs font-bold uppercase tracking-widest text-brandGold">Respaldo Profesional</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-slate-900 mt-2 mb-4">
+          Citas & Opiniones de Clientes
+        </h2>
+        <p class="text-slate-600 text-sm font-light">
+          La confianza depositada por nuestros clientes directos e institucionales es nuestro principal activo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- CITA 1 -->
+        <div class="p-8 rounded-sm bg-brandBg border border-slate-200 relative reveal delay-100">
+          <div class="flex text-brandGold mb-4">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-slate-700 text-xs leading-relaxed italic mb-6">
+            "La Dra. Valenzuela estructuró la reorganización patrimonial de nuestra empresa familiar con una solvencia impecable. Su claridad para explicar temas complejos nos dio total tranquilidad."
+          </p>
+          <div class="border-t border-slate-200 pt-4 flex justify-between items-center">
+            <div>
+              <p class="font-serif font-bold text-slate-900 text-sm">Ing. Martín Benítez</p>
+              <p class="text-[11px] text-slate-500">Director Ejecutivo - Grupo Logístico S.A.</p>
+            </div>
+            <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-semibold">Verificado</span>
+          </div>
+        </div>
+
+        <!-- CITA 2 -->
+        <div class="p-8 rounded-sm bg-brandBg border border-slate-200 relative reveal delay-200">
+          <div class="flex text-brandGold mb-4">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-slate-700 text-xs leading-relaxed italic mb-6">
+            "Excelente asesoramiento en el proceso sucesorio. Resolvió controversias familiares de años con una enorme empatía y una negociación justa para todas las partes."
+          </p>
+          <div class="border-t border-slate-200 pt-4 flex justify-between items-center">
+            <div>
+              <p class="font-serif font-bold text-slate-900 text-sm">Dra. Claudia Rossi</p>
+              <p class="text-[11px] text-slate-500">Cliente Sucesión Patrimonial</p>
+            </div>
+            <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-semibold">Verificado</span>
+          </div>
+        </div>
+
+        <!-- CITA 3 -->
+        <div class="p-8 rounded-sm bg-brandBg border border-slate-200 relative reveal delay-300">
+          <div class="flex text-brandGold mb-4">
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+          </div>
+          <p class="text-slate-700 text-xs leading-relaxed italic mb-6">
+            "Capacidad de respuesta inmediata y firmeza técnica en litigios comerciales. Es nuestra abogada de consulta permanente ante cualquier negociación de envergadura."
+          </p>
+          <div class="border-t border-slate-200 pt-4 flex justify-between items-center">
+            <div>
+              <p class="font-serif font-bold text-slate-900 text-sm">Lic. Roberto F. Albarracín</p>
+              <p class="text-[11px] text-slate-500">Socio Gerente - Fintech & Tech Solutions</p>
+            </div>
+            <span class="text-[10px] bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-semibold">Verificado</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. SECCIÓN DE CONTACTO & AGENDAMIENTO DIRECTO -->
+  <section id="contacto" class="py-20 bg-brandBg border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <div class="lg:col-span-5 reveal">
+          <span class="text-xs font-bold uppercase tracking-widest text-brandGold">Atención Personalizada</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-slate-900 mt-2 mb-6">
+            Coordine una Consulta Privada
+          </h2>
+          <p class="text-slate-600 text-sm font-light leading-relaxed mb-8">
+            Complete el formulario o comuníquese a través de nuestras vías directas. Analizaremos su caso de manera estricta bajo secreto profesional.
+          </p>
+
+          <div class="space-y-6">
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 rounded-sm bg-slate-900 text-brandGold flex items-center justify-center flex-shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-slate-900 text-base">Oficina Principal</h4>
+                <p class="text-xs text-slate-600 font-light mt-0.5">Av. Alvear 1807, Piso 4°, Recoleta<br>Ciudad Autónoma de Buenos Aires, C1129AAA</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 rounded-sm bg-slate-900 text-brandGold flex items-center justify-center flex-shrink-0">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-slate-900 text-base">Teléfonos de Atención</h4>
+                <p class="text-xs text-slate-600 font-light mt-0.5">+54 11 2345-6789 (Línea Fija)<br>+54 9 11 9876-5432 (WhatsApp Oficial)</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-10 h-10 rounded-sm bg-slate-900 text-brandGold flex items-center justify-center flex-shrink-0">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="font-serif font-bold text-slate-900 text-base">Correo Electrónico</h4>
+                <p class="text-xs text-slate-600 font-light mt-0.5">contacto@valenzuela-abogada.com<br>evalenzuela@derechoyestrategia.com</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- BOTÓN WHATSAPP DESTACADO -->
+          <div class="mt-8 pt-8 border-t border-slate-200">
+            <a href="https://wa.me/5491123456789" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-sm text-xs font-bold uppercase tracking-wider transition-colors shadow-sm">
+              <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i>
+              Consulta Inmediata vía WhatsApp
+            </a>
+          </div>
+
+        </div>
+
+        <!-- FORMULARIO DIRECTO -->
+        <div class="lg:col-span-7 reveal delay-200">
+          <div class="bg-white p-8 sm:p-10 rounded-sm border border-slate-200 shadow-sm">
+            <h3 class="font-serif text-2xl font-bold text-slate-900 mb-2">Formulario de Registro de Consulta</h3>
+            <p class="text-xs text-slate-500 mb-6 font-light">
+              Los campos marcados con (*) son obligatorios. Su consulta será respondida en un plazo máximo de 24 horas hábiles.
+            </p>
+
+            <form id="main-contact-form" class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Nombre Completo *</label>
+                  <input type="text" name="fullName" required placeholder="Ej. Dr. Carlos Gómez" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm text-xs text-slate-900 focus:outline-none focus:border-brandGold focus:bg-white transition-colors">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Teléfono de Contacto *</label>
+                  <input type="tel" name="phone" required placeholder="Ej. +54 9 11 1234-5678" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm text-xs text-slate-900 focus:outline-none focus:border-brandGold focus:bg-white transition-colors">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Correo Electrónico</label>
+                  <input type="email" name="email" placeholder="ejemplo@empresa.com" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm text-xs text-slate-900 focus:outline-none focus:border-brandGold focus:bg-white transition-colors">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Área de Especialidad</label>
+                  <select name="category" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm text-xs text-slate-900 focus:outline-none focus:border-brandGold focus:bg-white transition-colors">
+                    <option value="Derecho Corporativo & Empresa">Derecho Corporativo & Empresa</option>
+                    <option value="Sucesiones & Planificación">Sucesiones & Planificación Patrimonial</option>
+                    <option value="Derecho Laboral Ejecutivo">Derecho Laboral Ejecutivo</option>
+                    <option value="Litigios & Arbitraje">Litigios & Resolución de Conflictos</option>
+                    <option value="Consulta General">Otra Consulta General</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Síntesis de su Consulta Legal</label>
+                <textarea name="message" rows="4" placeholder="Describa brevemente los hechos o situación que requiere evaluación..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-sm text-xs text-slate-900 focus:outline-none focus:border-brandGold focus:bg-white transition-colors resize-none"></textarea>
+              </div>
+
+              <div class="flex items-center space-x-2">
+                <input type="checkbox" id="terms" required class="rounded text-brandGold focus:ring-brandGold">
+                <label for="terms" class="text-[11px] text-slate-500 font-light">
+                  Acepto el tratamiento confidencial de los datos ingresados para coordinar la entrevista.
+                </label>
+              </div>
+
+              <button type="submit" class="w-full py-4 bg-slate-900 text-white rounded-sm text-xs uppercase font-bold tracking-widest hover:bg-brandGold hover:text-slate-900 transition-all duration-300 shadow-md">
+                Enviar y Generar Agendamiento
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FOOTER -->
+  <footer class="bg-slate-900 text-white pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- COL 1 LOGO & RESUMEN -->
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-sm bg-brandGold text-slate-900 flex items-center justify-center font-serif font-bold">
+              EV
+            </div>
+            <span class="font-serif text-xl font-bold">Dra. Elena Valenzuela</span>
+          </div>
+          <p class="text-xs text-slate-400 font-light leading-relaxed">
+            Asesoramiento legal de alta gama en Argentina. Soluciones jurídicas eficaces, previsibles y transparentes.
+          </p>
+        </div>
+
+        <!-- COL 2 NAVEGACIÓN -->
+        <div>
+          <h4 class="font-serif font-bold text-sm text-brandGold uppercase tracking-wider mb-4">Secciones</h4>
+          <ul class="space-y-2.5 text-xs text-slate-300 font-light">
+            <li><a href="#hero" class="hover:text-brandGold transition-colors">Inicio</a></li>
+            <li><a href="#areas" class="hover:text-brandGold transition-colors">Áreas de Práctica</a></li>
+            <li><a href="#sobre-mi" class="hover:text-brandGold transition-colors">Sobre Mí</a></li>
+            <li><a href="#metodologia" class="hover:text-brandGold transition-colors">Proceso de Trabajo</a></li>
+            <li><a href="#contacto" class="hover:text-brandGold transition-colors">Contacto Privado</a></li>
+          </ul>
+        </div>
+
+        <!-- COL 3 LEGALES -->
+        <div>
+          <h4 class="font-serif font-bold text-sm text-brandGold uppercase tracking-wider mb-4">Marco Profesional</h4>
+          <ul class="space-y-2.5 text-xs text-slate-300 font-light">
+            <li><span class="text-slate-400">Colegio Público de Abogados C.A.B.A.</span></li>
+            <li><span class="text-slate-400">Matrícula T° 112 F° 450</span></li>
+            <li><a href="#" class="hover:text-brandGold transition-colors">Aviso Legal & Ética Profesional</a></li>
+            <li><a href="#" class="hover:text-brandGold transition-colors">Política de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <!-- COL 4 REDES & CONTACTO -->
+        <div>
+          <h4 class="font-serif font-bold text-sm text-brandGold uppercase tracking-wider mb-4">Contacto Directo</h4>
+          <p class="text-xs text-slate-400 mb-4 font-light">
+            Av. Alvear 1807, 4° Piso, CABA<br>
+            Tel: +54 11 2345-6789
+          </p>
+          <div class="flex space-x-3">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-slate-800 hover:bg-brandGold hover:text-slate-900 flex items-center justify-center transition-colors">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/5491123456789" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded bg-slate-800 hover:bg-emerald-600 flex items-center justify-center transition-colors">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+            </a>
+            <a href="mailto:contacto@valenzuela-abogada.com" class="w-9 h-9 rounded bg-slate-800 hover:bg-brandGold hover:text-slate-900 flex items-center justify-center transition-colors">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COPYRIGHT & BACK TO TOP -->
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 font-light">
+        <p>© 2026 Dra. Elena Valenzuela. Todos los derechos reservados.</p>
+        <button id="back-to-top" class="mt-4 sm:mt-0 text-slate-400 hover:text-brandGold transition-colors inline-flex items-center gap-1 opacity-0 pointer-events-none transition-opacity">
+          Volver Arriba <i data-lucide="chevron-up" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- MODAL DE AGENDAMIENTO EXPRESS -->
+  <div id="booking-modal" class="fixed inset-0 modal-backdrop z-50 hidden items-center justify-center p-4">
+    <div class="bg-white max-w-lg w-full rounded-sm p-6 sm:p-8 shadow-2xl relative border border-slate-200">
+      <button id="close-modal-btn" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-900 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="text-[10px] font-bold uppercase tracking-widest text-brandGold">Reserva Express</span>
+        <h3 class="font-serif text-2xl font-bold text-slate-900 mt-1">Agendar Consulta Jurídica</h3>
+        <p class="text-xs text-slate-500 font-light mt-1">Ingrese sus datos para coordinar una entrevista presencial u online.</p>
+      </div>
+
+      <form id="modal-booking-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Nombre Completo *</label>
+          <input type="text" name="fullName" required placeholder="Nombre y Apellido" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-sm text-xs focus:outline-none focus:border-brandGold">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Teléfono / WhatsApp *</label>
+          <input type="tel" name="phone" required placeholder="+54 9 11 ..." class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-sm text-xs focus:outline-none focus:border-brandGold">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Materia Legal</label>
+          <select name="category" class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-sm text-xs focus:outline-none focus:border-brandGold">
+            <option value="Derecho Corporativo & Empresa">Derecho Corporativo & Empresa</option>
+            <option value="Sucesiones & Patrimonial">Sucesiones & Patrimonial</option>
+            <option value="Laboral Ejecutivo">Laboral Ejecutivo</option>
+            <option value="Litigios & Controversias">Litigios & Controversias</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Detalles breves</label>
+          <textarea name="message" rows="3" placeholder="Comentarios adicionales..." class="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-sm text-xs focus:outline-none focus:border-brandGold resize-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 bg-slate-900 text-white rounded-sm text-xs uppercase font-bold tracking-widest hover:bg-brandGold hover:text-slate-900 transition-colors shadow-md">
+          Confirmar & Abrir WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast-notification" class="fixed bottom-6 right-6 z-50 hidden transform transition-all duration-300 translate-y-10 opacity-0 bg-slate-900 text-white px-5 py-4 rounded-sm shadow-2xl border border-slate-800 flex items-center space-x-3">
+    <div class="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0">
+      <i data-lucide="check-circle" class="w-4 h-4"></i>
+    </div>
+    <p id="toast-message" class="text-xs font-medium text-slate-200"></p>
+  </div>
+
+  <!-- Custom Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
